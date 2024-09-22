@@ -1,6 +1,7 @@
 public class row {
     public static void main(String[] args) {
         System.out.println(ryad());
+        System.out.println("to re-push");
     }
     public static String ryad()
     {
