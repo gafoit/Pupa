@@ -1,7 +1,7 @@
 public class Palindrome {
     public static void main(String[] args) {
-        String[] seq = {"101","11","5151"};
-        for (String s : seq) {
+        String[] str_seq = {"101","11","5151"};
+        for (String s : str_seq) {
             System.out.println(isPalindrome(s));
         }
 
