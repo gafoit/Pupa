@@ -1,12 +1,14 @@
 package laba2.geometry2d;
 
 
-public class Circle implements Figure {
-    private double radius;
+import laba2.exceptions.IllegalCircleException;
 
-    public Circle(double radius) {
+public class Circle implements Figure {
+    private final double radius;
+
+    public Circle(double radius) throws IllegalCircleException {
         if (radius <= 0) {
-            throw new IllegalArgumentException("Radius must be greater than 0");
+            throw new IllegalCircleException("Radius must be greater than 0");
         }
         this.radius = radius;
     }
@@ -23,6 +25,6 @@ public class Circle implements Figure {
 
     @Override
     public String toString() {
-        return "Circle with radius: " + radius;
+        return "Circle [radius=" + radius +"]";
     }
 }
