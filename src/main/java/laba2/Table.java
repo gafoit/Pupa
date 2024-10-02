@@ -1,8 +1,9 @@
 package laba2;
 
 public class Table {
-    private int rows, cols;
-    private int[][] value;
+    private final int rows;
+    private final int cols;
+    private final int[][] value;
 
     public Table(int rows, int cols) {
         if (rows < 1 || cols < 1) {
@@ -13,9 +14,6 @@ public class Table {
         value = new int[rows][cols];
     }
 
-    public static void main(String[] args) {
-
-    }
 
     public void setValue(int row, int col, int value) {
         this.value[row][col] = value;

@@ -1,6 +1,7 @@
 package laba2.geometry3d;
 
 import laba2.exceptions.IllegalCircleException;
+import laba2.exceptions.IllegalRectException;
 import laba2.geometry2d.Circle;
 import laba2.geometry2d.Figure;
 import laba2.geometry2d.Rectangle;
@@ -23,7 +24,7 @@ public class Cylinder {
         }
     }
 
-    public Cylinder(double width, double length, double height) {
+    public Cylinder(double width, double length, double height) throws IllegalRectException {
         this.height = height;
         this.base = new Rectangle(width, length);
     }

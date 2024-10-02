@@ -1,6 +1,5 @@
 package laba2;
 
-import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Random;
 

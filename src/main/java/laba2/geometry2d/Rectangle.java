@@ -11,13 +11,9 @@ public class Rectangle implements Figure {
         return width * length;
     }
 
-    public Rectangle(double width, double length) {
+    public Rectangle(double width, double length) throws IllegalRectException {
         if (width<=0 || length <=0) {
-            try {
-                throw new IllegalRectException("width and height must be greater than 0");
-            } catch (IllegalRectException e) {
-                throw new RuntimeException(e);
-            }
+            throw new IllegalRectException("width and height must be greater than 0");
         }
         this.width = width;
         this.length = length;

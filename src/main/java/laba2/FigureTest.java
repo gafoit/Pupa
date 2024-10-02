@@ -1,6 +1,7 @@
 package laba2;
 
 import laba2.exceptions.IllegalCircleException;
+import laba2.exceptions.IllegalRectException;
 import laba2.geometry2d.Circle;
 import laba2.geometry2d.Figure;
 import laba2.geometry2d.Rectangle;
@@ -16,10 +17,20 @@ public class FigureTest {
         }
         System.out.println(circle + "\tS = " + circle.area() + "\tP = " + circle.perimeter());
 
-        Figure rectangle = new Rectangle(3.0, 4.0);
+        Figure rectangle;
+        try {
+            rectangle = new Rectangle(3.0, 4.0);
+        } catch (IllegalRectException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println(rectangle + "\tS = " + rectangle.area() + "\tP = " + rectangle.perimeter());
 
-        Cylinder rectCylinder1 = new Cylinder(3.0, 4.0, 5.0);
+        Cylinder rectCylinder1;
+        try {
+            rectCylinder1 = new Cylinder(3.0, 4.0, 5.0);
+        } catch (IllegalRectException e) {
+            throw new RuntimeException(e);
+        }
         Cylinder rectCylinder2 = new Cylinder(rectangle, 5.0);
         System.out.println(rectCylinder1 + "\tV = " + rectCylinder1.volume());
         System.out.println(rectCylinder2 + "\tV = " + rectCylinder2.volume());
