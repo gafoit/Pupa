@@ -2,9 +2,9 @@ name: Java CI with Gradle
 
 on:
   pull_request:
-    branches: [ "master","laba2" ]
+    branches: [ "master","Laba2" ]
   push:
-    branches: [ "master","laba2" ]
+    branches: [ "master","Laba2" ]
 
 jobs:
   build-test:
